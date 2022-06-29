@@ -7,6 +7,10 @@ all resources entries and replace it with peer-pod extended resource
 You’ll need a Kubernetes cluster to run against. You can use [KIND](https://sigs.k8s.io/kind) to get a local cluster for testing, or run against a remote cluster.
 **Note:** Your controller will automatically use the current context in your kubeconfig file (i.e. whatever cluster `kubectl cluster-info` shows).
 
+You'll also need to advertise the extended resource `kata.peerpods.io/vm`.
+
+A simple daemonset advertising k8s extended resources is provided under the following [directory](./hack/extended-resources/).
+
 ### Using kind cluster
 For `kind` clusters, you can use the following Makefile targets
 
